@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সীরাতুন নবী ﷺ প্রতিযোগিতা</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: #0f766e;
+            background: -webkit-linear-gradient(135deg, #0f766e 0%, #065f46 50%, #064e3b 100%);
+            background: linear-gradient(135deg, #0f766e 0%, #065f46 50%, #064e3b 100%);
+            min-height: 100vh;
+            padding: 8px;
+            position: relative;
+            overflow-x: hidden;
+            transition: background 0.5s ease;
+        }
+        
+        body.warning-time {
+            background: #dc2626;
+            background: -webkit-linear-gradient(135deg, #fca5a5 0%, #f87171 50%, #ef4444 100%);
+            background: linear-gradient(135deg, #fca5a5 0%, #f87171 50%, #ef4444 100%);
+            -webkit-animation: backgroundPulse 1s infinite;
+            animation: backgroundPulse 1s infinite;
+        }
+        
+        @-webkit-keyframes backgroundPulse {
+            0%, 100% { 
+                background: -webkit-linear-gradient(135deg, #fca5a5 0%, #f87171 50%, #ef4444 100%);
+            }
+            50% { 
+                background: -webkit-linear-gradient(135deg, #fecaca 0%, #fca5a5 50%, #f87171 100%);
+            }
+        }
+        
+        @keyframes backgroundPulse {
+            0%, 100% { 
+                background: linear-gradient(135deg, #fca5a5 0%, #f87171 50%, #ef4444 100%);
+            }
+            50% { 
+                background: linear-gradient(135deg, #fecaca 0%, #fca5a5 50%, #f87171 100%);
+            }
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 15px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #10b981;
+        }
+        
+        h1 {
+            color: #065f46;
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 8px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .info-box {
+            background: #d1fae5;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 16px;
+            border: 2px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .info-box h3 {
+            color: #065f46;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box li {
+            color: #374151;
+            margin: 6px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .info-box li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .warning-box p {
+            color: #78350f;
+            font-weight: 600;
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .form-group {
+            margin-bottom: 14px;
+        }
+        
+        label {
+            display: block;
+            color: #1f2937;
+            font-weight: 700;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 14px;
+            background: white;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .btn-primary {
+            background: #10b981;
+            color: white;
+        }
+        
+        .btn-primary:active {
+            background: #059669;
+        }
+        
+        .btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+    padding: 12px 14px;
+    width: auto;
+    font-size: 16px;  /* 13px থেকে 16px */
+    display: inline-block;
+    font-weight: 700;
+}
+        
+        .btn-secondary:active {
+            background: #d1d5db;
+        }
+        
+        .btn-danger {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #78350f;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.btn-danger:active {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+        
+        .timer-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 8px 12px;  
+            margin-bottom: 12px;
+            border: 2px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .timer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        
+        .timer-info {
+            color: #065f46;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .timer {
+            color: #ef4444;
+            font-size: 20px;
+            font-weight: 900 !important;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .timer.warning {
+            -webkit-animation: pulse 1s infinite;
+            animation: pulse 1s infinite;
+        }
+        
+        @-webkit-keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #10b981;
+            border-radius: 10px;
+        }
+        
+        .question-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 12px;
+            border: 2px solid #f3f4f6;
+            text-align: center;
+        }
+        
+        .question-badge {
+            display: inline-block;
+            background: #d1fae5;
+            color: #065f46;
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .question-text {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 14px;
+            line-height: 1.3;
+        }
+        
+        .option {
+            width: 100%;
+            padding: 11px 14px;
+            margin: 5px 0;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            background: white;
+            text-align: left;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            display: block;
+        }
+        
+        .option:active {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .option.selected {
+            border-color: #10b981;
+            background: #d1fae5;
+        }
+        
+        .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    gap: 10px;
+}
+
+.nav-buttons .btn-secondary {
+    margin: 0;
+    flex: 0 0 auto;  
+    min-width: 80px;  
+}
+
+.nav-buttons .btn-danger {
+    margin: 0;
+    flex: 1;
+}
+        
+        .success-icon {
+            text-align: center;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .success-message {
+            text-align: center;
+        }
+        
+        .success-message h2 {
+            color: #065f46;
+            font-size: 28px;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+        
+        .success-message p {
+            color: #6b7280;
+            font-size: 16px;
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+        }
+        
+        .loading-spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #10b981;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 10000;
+            padding: 20px;
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .modal-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 6px;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+            }
+            
+            .card {
+                padding: 16px;
+            }
+            
+            .timer-box {
+                padding: 10px;
+                margin-bottom: 12px;
+            }
+            
+            .timer {
+                font-size: 20px;
+            }
+            
+            .progress-bar {
+                height: 6px;
+            }
+            
+            .question-text {
+                font-size: 18px;
+            }
+            
+            .option {
+                font-size: 16px;
+                padding: 18px 14px;
+            }
+
+            .modal-content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+	
+	function toBengaliNumber(num) {
+    var bengali = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return num.toString().split('').map(function(d) { return bengali[d]; }).join('');
+}
+
+function getBengaliOption(index) {
+    var options = ['ক', 'খ', 'গ', 'ঘ'];
+    return options[index];
+}
+	
+        var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGG8_nTYLL4yd8SODuDCJthZARwoRqcAANAK832sypU5k-smKdOgMJq-biafvPy8OZ/exec';
+        
+        var QUESTIONS = [
+            {
+                id: 1,
+                question: 'রাসূলুল্লাহ ﷺ কোন সালে জন্মগ্রহণ করেন?',
+                options: ['৫৭০ খ্রিস্টাব্দ', '৫৬০ খ্রিস্টাব্দ', '৫৮০ খ্রিস্টাব্দ', '৫৯০ খ্রিস্টাব্দ'],
+                correctAnswer: 0
+            },
+            {
+                id: 2,
+                question: 'রাসূলুল্লাহ ﷺ এর পিতার নাম কী?',
+                options: ['আবু তালিব', 'আবদুল্লাহ', 'আবদুল মুত্তালিব', 'আবু বকর'],
+                correctAnswer: 1
+            },
+            {
+                id: 3,
+                question: 'রাসূলুল্লাহ ﷺ এর দুধ মাতার নাম কী?',
+                options: ['আমিনা', 'হালিমা', 'খাদিজা', 'আয়িশা'],
+                correctAnswer: 1
+            },
+            {
+                id: 4,
+                question: 'প্রথম কোন মহিলা ইসলাম গ্রহণ করেন?',
+                options: ['আয়িশা রা.', 'ফাতিমা রা.', 'খাদিজা রা.', 'হাফসা রা.'],
+                correctAnswer: 2
+            },
+            {
+                id: 5,
+                question: 'হিজরতের সময় রাসূলুল্লাহ ﷺ এর সাথী কে ছিলেন?',
+                options: ['উমর রা.', 'আবু বকর রা.', 'উসমান রা.', 'আলী রা.'],
+                correctAnswer: 1
+            },
+            {
+                id: 6,
+                question: 'বদর যুদ্ধ কোন সালে সংঘটিত হয়?',
+                options: ['২ হিজরী', '৩ হিজরী', '৪ হিজরী', '৫ হিজরী'],
+                correctAnswer: 0
+            },
+            {
+                id: 7,
+                question: 'উহুদ যুদ্ধে রাসূলুল্লাহ ﷺ এর কয়টি দাঁত শহীদ হয়?',
+                options: ['১টি', '২টি', '৩টি', '৪টি'],
+                correctAnswer: 1
+            },
+            {
+                id: 8,
+                question: 'মক্কা বিজয় কোন সালে হয়?',
+                options: ['৬ হিজরী', '৭ হিজরী', '৮ হিজরী', '৯ হিজরী'],
+                correctAnswer: 2
+            },
+			{
+                id: 9,
+                question: 'পিতার দিক থেকে নবিজির বংশধারায় "মুদরিকা" -এর পুত্র কে?',
+                options: ['মুদর', 'রূহ', 'খুযাইমাহ', 'মালিক'],
+                correctAnswer: 2
+            }
+        ];
+
+        var state = {
+            view: 'start',
+            participant: { name: '', phone: '' },
+            answers: {},
+            currentQuestion: 0,
+            timeLeft: 1 * 60,
+            startTime: null,
+            timerInterval: null,
+            loading: false,
+            lastSubmission: null,
+            submittedPhones: {},
+            exitCount: 0,
+            sessionId: null,
+            warningPlayed: false
+        };
+
+        var audioContext = null;
+        var hasPlayedWarning = false;
+        
+        function initAudio() {
+            try {
+                var AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) {
+                    audioContext = new AudioContext();
+                }
+            } catch (e) {
+                console.log('Audio not supported');
+            }
+        }
+        
+        function playWarningBeep() {
+            if (!audioContext || hasPlayedWarning) return;
+            
+            try {
+                if (navigator.vibrate) {
+                    navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200]);
+                }
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                var startTime = audioContext.currentTime;
+                var beepInterval = 0.7;
+                var totalDuration = 5;
+                var beepCount = Math.floor(totalDuration / beepInterval);
+                
+                for (var i = 0; i < beepCount; i++) {
+                    (function(index) {
+                        var oscillator = audioContext.createOscillator();
+                        var gainNode = audioContext.createGain();
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        oscillator.type = 'sine';
+                        oscillator.frequency.setValueAtTime(800, startTime + (index * beepInterval));
+                        
+                        gainNode.gain.setValueAtTime(0, startTime + (index * beepInterval));
+                        gainNode.gain.linearRampToValueAtTime(0.3, startTime + (index * beepInterval) + 0.05);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, startTime + (index * beepInterval) + 0.4);
+                        
+                        oscillator.start(startTime + (index * beepInterval));
+                        oscillator.stop(startTime + (index * beepInterval) + 0.4);
+                    })(i);
+                }
+                
+                hasPlayedWarning = true;
+            } catch (e) {
+                console.log('Warning error:', e);
+            }
+        }
+
+        function generateSessionId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+
+        function saveState() {
+            try {
+                var data = {
+                    view: state.view,
+                    participant: state.participant,
+                    answers: state.answers,
+                    currentQuestion: state.currentQuestion,
+                    timeLeft: state.timeLeft,
+                    startTime: state.startTime,
+                    submittedPhones: state.submittedPhones,
+                    exitCount: state.exitCount,
+                    sessionId: state.sessionId
+                };
+                localStorage.setItem('seerahQuiz', JSON.stringify(data));
+            } catch (e) {
+                console.error('Save error:', e);
+            }
+        }
+
+        function loadState() {
+            try {
+                var saved = localStorage.getItem('seerahQuiz');
+                if (!saved) return;
+                
+                var data = JSON.parse(saved);
+                
+                if (data.view === 'quiz' && data.sessionId) {
+                    state.view = data.view;
+                    state.participant = data.participant;
+                    state.answers = data.answers;
+                    state.currentQuestion = data.currentQuestion;
+                    state.timeLeft = data.timeLeft;
+                    state.startTime = data.startTime;
+                    state.exitCount = data.exitCount;
+                    state.sessionId = data.sessionId;
+                    
+                    if (data.startTime) {
+                        var elapsed = Math.floor((Date.now() - data.startTime) / 1000);
+                        state.timeLeft = Math.max(0, 60 - elapsed);
+                        
+                        if (state.timeLeft <= 0) {
+                            submitQuiz();
+                            return;
+                        }
+                    }
+                    
+                    state.exitCount++;
+                    
+                    if (state.exitCount > 2) {
+                        alert('⚠️ আপনি ২ বারের বেশি বের হয়ে গেছেন!');
+                        resetQuiz();
+                        return;
+                    }
+                    
+                    saveState();
+                    showExitWarning();
+                    return;
+                }
+                
+                if (data.submittedPhones) {
+                    state.submittedPhones = data.submittedPhones;
+                }
+            } catch (e) {
+                console.error('Load error:', e);
+            }
+        }
+
+        function showExitWarning() {
+            var modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.id = 'exitModal';
+            modal.innerHTML = '<div class="modal-inner"><div class="modal-content">' +
+                '<div style="font-size: 50px; margin-bottom: 15px;">⚠️</div>' +
+                '<h3 style="color: #dc2626; margin-bottom: 12px; font-size: 20px; font-weight: 800;">সতর্কতা!</h3>' +
+                '<p style="color: #374151; margin-bottom: 12px; font-size: 15px; font-weight: 600;">' +
+                'আপনি পরীক্ষা থেকে বের হয়ে গিয়েছিলেন।</p>' +
+                '<div style="background: #fee2e2; padding: 12px; border-radius: 10px; margin-bottom: 15px; border: 2px solid #fca5a5;">' +
+                '<p style="color: #dc2626; font-weight: 800; font-size: 18px; margin: 0;">বের হওয়া: ' + state.exitCount + '/2</p>' +
+                '</div>' +
+                '<p style="color: ' + (state.exitCount === 2 ? '#dc2626' : '#6b7280') + '; font-size: 13px; margin-bottom: 20px; font-weight: ' + (state.exitCount === 2 ? '700' : '500') + ';">' +
+                (state.exitCount === 2 ? '🚨 আরেকবার বের হলে বাতিল!' : '⚠️ সতর্ক থাকুন।') + '</p>' +
+                '<button onclick="closeExitWarning()" style="background: #10b981; color: white; border: none; padding: 12px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;">' +
+                'চালিয়ে যান</button></div></div>';
+            document.body.appendChild(modal);
+        }
+
+        function closeExitWarning() {
+            var modal = document.getElementById('exitModal');
+            if (modal) {
+                modal.parentNode.removeChild(modal);
+            }
+            startTimer();
+            render();
+        }
+
+        function resetQuiz() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            document.body.className = '';
+            hasPlayedWarning = false;
+            var submittedPhones = state.submittedPhones;
+            state = {
+                view: 'start',
+                participant: { name: '', phone: '' },
+                answers: {},
+                currentQuestion: 0,
+                timeLeft: 60,
+                startTime: null,
+                timerInterval: null,
+                loading: false,
+                lastSubmission: null,
+                submittedPhones: submittedPhones,
+                exitCount: 0,
+                sessionId: null,
+                warningPlayed: false
+            };
+            saveState();
+            render();
+        }
+
+        function formatTime(sec) {
+            var m = Math.floor(sec / 60);
+            var s = sec % 60;
+            return m + ':' + (s < 10 ? '0' : '') + s;
+        }
+
+        function startQuiz() {
+            var nameInput = document.getElementById('name');
+            var phoneInput = document.getElementById('phone');
+            
+            if (!nameInput || !phoneInput) return;
+            
+            var name = nameInput.value.replace(/^\s+|\s+$/g, '');
+            var phone = phoneInput.value.replace(/^\s+|\s+$/g, '');
+            
+            if (!name || !phone) {
+                alert('নাম ও মোবাইল নম্বর দিন');
+                return;
+            }
+
+            if (!/^01\d{9}$/.test(phone)) {
+                alert('সঠিক মোবাইল নম্বর দিন');
+                return;
+            }
+
+            if (state.submittedPhones[phone]) {
+                alert('এই নম্বর দিয়ে ইতিমধ্যে দেওয়া হয়েছে!');
+                return;
+            }
+            
+            state.participant = { name: name, phone: phone };
+            state.startTime = Date.now();
+            state.sessionId = generateSessionId();
+            state.view = 'quiz';
+            state.exitCount = 0;
+            saveState();
+            startTimer();
+            render();
+        }
+
+        function startTimer() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            
+            if (!audioContext) {
+                initAudio();
+            }
+            
+            state.timerInterval = setInterval(function() {
+                state.timeLeft--;
+                saveState();
+                if (state.timeLeft <= 0) submitQuiz();
+                updateTimer();
+            }, 1000);
+        }
+
+        function updateTimer() {
+            var el = document.getElementById('timer');
+            if (el) {
+                el.textContent = formatTime(state.timeLeft);
+                el.className = state.timeLeft <= 30 ? 'timer warning' : 'timer';
+            }
+            
+            if (state.timeLeft === 30 && !hasPlayedWarning) {
+                document.body.className = 'warning-time';
+                playWarningBeep();
+                
+                setTimeout(function() {
+                    if (state.timeLeft > 0 && state.timeLeft < 30) {
+                        document.body.className = '';
+                    }
+                }, 30000);
+            }
+        }
+
+        function submitQuiz() {
+            if (state.timerInterval) clearInterval(state.timerInterval);
+            document.body.className = '';
+            document.body.style.background = '#0f766e';
+            document.body.style.background = 'linear-gradient(135deg, #0f766e 0%, #065f46 50%, #064e3b 100%)';
+            hasPlayedWarning = false;
+            state.loading = true;
+            render();
+            
+            var timeTaken = Math.floor((Date.now() - state.startTime) / 1000);
+            var correct = 0;
+            var wrong = 0;
+            
+            for (var i = 0; i < QUESTIONS.length; i++) {
+                var q = QUESTIONS[i];
+                if (state.answers[q.id] !== undefined) {
+                    if (state.answers[q.id] === q.correctAnswer) {
+                        correct++;
+                    } else {
+                        wrong++;
+                    }
+                }
+            }
+
+            var submission = {
+                sessionId: state.sessionId,
+                name: state.participant.name,
+                phone: state.participant.phone,
+                correct: correct,
+                wrong: wrong,
+                unanswered: QUESTIONS.length - correct - wrong,
+                timeTaken: formatTime(timeTaken),
+                exitCount: state.exitCount,
+                timestamp: Date.now()
+            };
+
+            if (GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', GOOGLE_SCRIPT_URL, true);
+                xhr.send(JSON.stringify(submission));
+            }
+
+            state.submittedPhones[state.participant.phone] = Date.now();
+            state.lastSubmission = submission;
+            state.loading = false;
+            state.view = 'submitted';
+            state.sessionId = null;
+            state.exitCount = 0;
+            saveState();
+            render();
+        }
+
+        function selectAnswer(qId, idx) {
+            state.answers[qId] = idx;
+            saveState();
+            render();
+        }
+
+        function nextQuestion() {
+            if (state.currentQuestion < QUESTIONS.length - 1) {
+                state.currentQuestion++;
+                saveState();
+                render();
+            }
+        }
+
+        function prevQuestion() {
+            if (state.currentQuestion > 0) {
+                state.currentQuestion--;
+                saveState();
+                render();
+            }
+        }
+
+        function renderStart() {
+            document.body.className = '';
+            var html = '<div class="container"><div class="card">' +
+                '<h1>সীরাতুন নবী ﷺ প্রতিযোগিতা</h1>' +
+                '<p class="subtitle">রাসূলুল্লাহ ﷺ এর জীবনী নিয়ে জ্ঞান প্রতিযোগিতা</p>' +
+                '<div class="info-box"><h3>প্রতিযোগিতার বিবরণ:</h3><ul>' +
+                '<li>মোট প্রশ্ন: ' + '৯' + 'টি MCQ</li>' +
+                '<li>সময়: ১ মিনিট</li>' +
+                '<li>২ বারের বেশি বের হলে বাতিল</li>' +
+                '<li>সব প্রশ্নের উত্তর দিন</li>' +
+                '</ul></div>' +
+                '<div class="warning-box"><p>⚠️ একই মোবাইল নম্বর দিয়ে শুধু একবার অংশগ্রহণ করতে পারবেন</p></div>' +
+                '<div class="form-group"><label>👤 নাম *</label>' +
+                '<input type="text" id="name" placeholder="পূর্ণ নাম লিখুন"></div>' +
+                '<div class="form-group"><label>📱 মোবাইল নম্বর *</label>' +
+                '<input type="tel" id="phone" placeholder="01XXXXXXXXX" maxlength="11"></div>' +
+                '<button class="btn btn-primary" onclick="startQuiz()">🚀 শুরু করুন</button>' +
+                '</div></div>';
+            return html;
+        }
+
+        function renderQuiz() {
+            if (state.loading) {
+                return '<div class="container"><div class="card">' +
+                    '<div class="loading"><div class="loading-spinner"></div>' +
+                    '<p style="margin-top:15px; font-size:16px; font-weight:600;">জমা হচ্ছে...</p>' +
+                    '</div></div></div>';
+            }
+
+            var q = QUESTIONS[state.currentQuestion];
+            var progress = ((state.currentQuestion + 1) / QUESTIONS.length) * 100;
+            
+            if (state.timeLeft <= 30) {
+                document.body.className = 'warning-time';
+            } else {
+                document.body.className = '';
+            }
+
+            var opts = '';
+            for (var i = 0; i < q.options.length; i++) {
+                var sel = state.answers[q.id] === i ? 'selected' : '';
+                opts += '<button class="option ' + sel + '" onclick="selectAnswer(' + q.id + ', ' + i + ')">' +
+    '<strong>' + getBengaliOption(i) + '.</strong> ' + q.options[i] +
+    '</button>';
+            }
+
+            var isLast = state.currentQuestion === QUESTIONS.length - 1;
+           
+            var html = '<div class="container">' +
+                '<div class="timer-box">' +
+                '<div class="timer-header">' +
+               '<div class="timer-info">📝 প্রশ্ন ' + toBengaliNumber(state.currentQuestion + 1) + '/' + toBengaliNumber(QUESTIONS.length) + '</div>' +
+                '<div class="' + (state.timeLeft <= 30 ? 'timer warning' : 'timer') + '">⏰ <span id="timer">' + formatTime(state.timeLeft) + '</span></div>' +
+                '</div>' +
+                '<div class="progress-bar"><div class="progress-fill" style="width:' + progress + '%"></div></div>' +
+                '</div>' +
+                '<div class="question-card">' +
+                '<span class="question-badge">বহুনির্বাচনী</span>' +
+                '<div class="question-text">' + q.question + '</div>' +
+                opts +
+                '</div>' +
+                  '<div class="nav-buttons">' +
+'<button class="btn btn-secondary" onclick="prevQuestion()" ' + (state.currentQuestion === 0 ? 'disabled' : '') + '><span style="font-size: 20px;">←</span> পূর্ববর্তী</button>';
+
+if (isLast) {
+    html += '<button class="btn btn-danger" onclick="submitQuiz()">✓ জমা দিন</button>';
+} else {
+    html += '<span style="flex: 1;"></span>';
+}
+
+html += '<button class="btn btn-secondary" onclick="nextQuestion()" ' + (isLast ? 'disabled' : '') + '>পরবর্তী <span style="font-size: 20px;">→</span></button>';
+html += '</div></div>';
+            return html;
+        }
+
+        function renderSubmitted() {
+            return '<div class="container"><div class="card">' +
+                '<div class="success-icon">✅</div>' +
+                '<div class="success-message">' +
+                '<h2>জমা সফল হয়েছে!</h2>' +
+                '<p style="font-size:17px; margin:15px 0;">' + state.participant.name + ', আপনার উত্তরপত্র সফলভাবে জমা হয়েছে।</p>' +
+                '<div class="info-box" style="margin-top:20px;">' +
+                '<h3>📊 আপনার ফলাফল:</h3><ul>' +
+                '<li>সঠিক উত্তর: <strong>' + state.lastSubmission.correct + 'টি</strong></li>' +
+                '<li>ভুল উত্তর: <strong>' + state.lastSubmission.wrong + 'টি</strong></li>' +
+                '<li>উত্তর দেননি: <strong>' + state.lastSubmission.unanswered + 'টি</strong></li>' +
+                '<li>সময় লেগেছে: <strong>' + state.lastSubmission.timeTaken + '</strong></li>' +
+                '<li>বেরিয়েছেন: <strong>' + state.lastSubmission.exitCount + ' বার</strong></li>' +
+                '</ul></div>' +
+                '<p style="color:#6b7280; margin-top:20px; font-size: 14px;">আল্লাহ আপনাকে উত্তম প্রতিদান দিন। 🤲</p>' +
+                '</div></div></div>';
+        }
+
+        function render() {
+            var app = document.getElementById('app');
+            if (state.view === 'start') {
+                app.innerHTML = renderStart();
+            } else if (state.view === 'quiz') {
+                app.innerHTML = renderQuiz();
+            } else if (state.view === 'submitted') {
+                app.innerHTML = renderSubmitted();
+            }
+        }
+
+        var hiddenTime = null;
+
+        window.onbeforeunload = function(e) {
+            if (state.view === 'quiz' && state.sessionId) {
+                saveState();
+                e = e || window.event;
+                if (e) {
+                    e.returnValue = '';
+                }
+                return '';
+            }
+        };
+
+        if (document.addEventListener) {
+            document.addEventListener('visibilitychange', function() {
+                if (state.view !== 'quiz' || !state.sessionId) return;
+
+                if (document.hidden) {
+                    hiddenTime = Date.now();
+                    saveState();
+                } else {
+                    if (hiddenTime) {
+                        var awayTime = Math.floor((Date.now() - hiddenTime) / 1000);
+                        
+                        if (awayTime >= 3) {
+                            state.exitCount++;
+                            
+                            if (state.exitCount > 2) {
+                                if (state.timerInterval) clearInterval(state.timerInterval);
+                                alert('⚠️ আপনি ২ বারের বেশি পরীক্ষা থেকে বের হয়ে গেছেন!');
+                                resetQuiz();
+                                return;
+                            }
+                            
+                            saveState();
+                            showExitWarning();
+                            return;
+                        }
+                        
+                        hiddenTime = null;
+                    }
+                    
+                    if (state.timerInterval) {
+                        clearInterval(state.timerInterval);
+                    }
+                    startTimer();
+                    render();
+                }
+            });
+        }
+
+        window.onload = function() {
+            loadState();
+            if (state.view === 'quiz' && state.sessionId && state.exitCount > 0) return;
+            render();
+        };
+
+    </script>
+</body>
+</html>
